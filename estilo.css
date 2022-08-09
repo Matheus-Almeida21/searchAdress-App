@@ -111,6 +111,14 @@ li span{
 }
 
 /*Responsivo*/
+@media (max-width: 800px){
+  #adress-container{
+    width: 80%;
+  }
+  #form-container{
+    width: 80%;
+  }
+}
 @media (max-width:630px){
   #adress-container{
     width: 80%;
@@ -124,7 +132,7 @@ li span{
     display: flex;
     flex-direction: column;
   }
-  span{
+  .erro{
     align-self: flex-start;
     font-size: 10px;
   }
