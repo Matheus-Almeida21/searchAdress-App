@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de endereço</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="form-container">
+      <form>
+        <label for="cep">CEP :</label>
+        <input type="number" id="cep" name="cep" placeholder="Apenas numeros"/>
+        <span class="erro"></span>
+        <button>Pesquisar</button>
+      </form>
+    </div>
+
+    <div id="adress-container">
+      <div>
+        <ul>
+          <li>Rua : <span class="logradouro"></span> </li>
+          <li>Bairro : <span class="bairro"></span> </li>
+          <li>Complemento : <span class="complemento"></span> </li>
+          <li>Cidade : <span class="localidade"></span> </li>
+          <li>Estado : <span class="uf"></span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

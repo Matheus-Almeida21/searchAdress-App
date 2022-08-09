@@ -1,0 +1,137 @@
+/*Reset*/
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*container*/
+#container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+#form-container{
+  border-radius: 5px;
+  background-color: #B4D9F0;
+  width: 40%;
+  height: 25%;
+}
+#adress-container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+form{
+  display: grid;
+  grid: "label label" 2fr "input button" 2fr "validity validity" 2fr / 2fr 1fr;
+  column-gap: 30px;
+  padding: 20px;
+}
+/*form items*/
+label{
+  grid-area: label;
+  font-weight: bolder;
+  color: #25323B;
+}
+input{
+  grid-area: input;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  height: 2rem;
+  background-color: #fff;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+span{
+  grid-area: validity;
+  align-self: end;
+  text-transform: uppercase;
+  font-size: small;
+}
+button{
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #1888CE;
+  color: #fff;
+}
+
+/*Box adress*/
+#adress-container{
+  display: none;
+  border-radius: 5px;
+  margin-top: 30px ;
+  background-color: #1888CE;
+  height: 23%;
+  width: 40%;
+  color: #25323B;
+  font-weight:bold;
+}
+#adress-container.active{
+  display: block;
+  animation: show .5s forwards;
+}
+@keyframes show {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
+}
+li:first-child{
+  padding-top: 0;
+}
+li{
+padding-top: 5px;
+}
+li span{
+  color: #fff;
+}
+
+.erro{
+  display: block;
+  color: red;
+}
+
+/*Responsivo*/
+@media (max-width:630px){
+  #adress-container{
+    width: 80%;
+  }
+  #form-container{
+    width: 80%;
+  }
+}
+@media (max-width:400px){
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  span{
+    align-self: flex-start;
+    font-size: 10px;
+  }
+  span, input, button{
+    margin-top: 8px;
+  }
+  button{
+    margin-bottom: 5px;
+  }
+}
